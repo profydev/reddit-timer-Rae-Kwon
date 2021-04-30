@@ -5,24 +5,27 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/search">Search</Link></li>
-          </ul>
-        </nav>
-        <Switch>
-          <Route path="/" />
-          <Route path="/search" />
-        </Switch>
-      </div>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/search">Search</Link></li>
+            </ul>
+          </nav>
+          <Switch>
+            <Route path="/" />
+            <Route path="/search" />
+          </Switch>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
