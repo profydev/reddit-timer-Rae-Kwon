@@ -3,31 +3,24 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import theme from './theme';
+import Header from './Header';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
+    <Router>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <div>
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/search">Search</Link></li>
-            </ul>
-          </nav>
-          <Switch>
-            <Route path="/" />
-            <Route path="/search" />
-          </Switch>
-        </div>
-      </Router>
-    </ThemeProvider>
+        <Header />
+        <Switch>
+          <Route path="/" />
+          <Route path="/search/:value" />
+        </Switch>
+      </ThemeProvider>
+    </Router>
   );
 }
 
