@@ -9,7 +9,7 @@ function Header() {
     <StyledHeader>
       <Link to="/"><img src="/assets/logo.svg" alt="Reddit Timer Logo" /></Link>
       <MenuBar>
-        <MenuItem><StyledLink to="/javascript">Search</StyledLink></MenuItem>
+        <MenuItem><StyledLink to="/search/javascript">Search</StyledLink></MenuItem>
         <MenuItem><StyledLink to="/#how-it-works">How it works</StyledLink></MenuItem>
         <MenuItem><StyledLink to="/#about">About</StyledLink></MenuItem>
       </MenuBar>
