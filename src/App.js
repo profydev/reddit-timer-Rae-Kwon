@@ -4,17 +4,22 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './GlobalStyle';
+import theme from './theme';
 import Header from './Header';
 
 function App() {
   return (
     <Router>
-      <Header />
-      <Switch>
-        <Route path="/" />
-        <Route path="/search/:value" />
-      </Switch>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header />
+        <Switch>
+          <Route path="/" />
+          <Route path="/search/:value" />
+        </Switch>
+      </ThemeProvider>
     </Router>
   );
 }

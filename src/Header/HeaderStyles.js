@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
   display: flex;
-  margin: 1.55rem 0 0 4.5rem;
+  margin: 2rem 0 0 4.5rem;
 `;
 
 const MenuBar = styled.ul`
@@ -11,11 +11,12 @@ const MenuBar = styled.ul`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding-right: 5.5rem;
+  margin-right: 4.45rem;
+  line-height: 0.5;
 `;
 
 const MenuItem = styled.li`
-  padding-left: 1.5rem;
+  margin-left: 1.625rem;
   text-decoration: none;
 `;
 
