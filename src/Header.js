@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -22,11 +23,11 @@ const MenuItem = styled.li`
 function Header() {
   return (
     <StyledHeader>
-      <img src="/assets/logo.svg" alt="Reddit Timer Logo" />
+      <Link to="/"><img src="/assets/logo.svg" alt="Reddit Timer Logo" /></Link>
       <MenuBar>
-        <MenuItem>Search</MenuItem>
-        <MenuItem>How it Works</MenuItem>
-        <MenuItem>About</MenuItem>
+        <MenuItem><Link to="/search">Search</Link></MenuItem>
+        <MenuItem><Link to="/#how-it-works">How it Works</Link></MenuItem>
+        <MenuItem><Link to="/#about">About</Link></MenuItem>
       </MenuBar>
     </StyledHeader>
   );
