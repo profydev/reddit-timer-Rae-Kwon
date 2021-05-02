@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" />
-        <Route path="/search" />
+        <Route path="/:search" />
       </Switch>
     </Router>
   );
